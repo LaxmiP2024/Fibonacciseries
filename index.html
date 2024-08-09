@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <!-- WAP to print the sum of fact of all digits in the given number without using function -->
+    <script>
+        num=prompt("Enter a number:");
+        factSum=0
+        for(i of num){
+            prod=1;
+            for(j=1;j<=i;j++){
+                prod=prod*j
+            }
+            factSum+=prod
+        }
+        console.log("sum of factorial of all digits in the given number without using function :"+factSum);
+    </script>
+
+    <!-- WAP to print the sum of all fib numbers in the given number -->
+
+    <script>
+        num=prompt("Enter a number:")
+        fibSum=0;
+        for(i of num){
+            a=0,b=1
+            while(true){
+                if(a==i){
+                    fibSum=fibSum+Number(i)
+                    break;
+                }
+                else if(a>i){
+                    break
+                }
+                c=a+b;
+                a=b;
+                b=c;
+            }
+        }
+        console.log("sum of all fibonacci numbers in the given number :" +fibSum);
+    </script>
+
+    <!-- WAP to print the missing Fibonacci numbers  -->
+    <script>
+        input=prompt("Enter a number:")
+        a=0,b=1,count=0,s=""
+        while(count!=input){
+            for(i=a+1;i<b;i++){
+                count++
+                s=s+i+""
+                if(count==input){
+                    break
+                }
+            }
+            c=a+b;
+            a=b;
+            b=c;
+        }
+        console.log("missing Fibonacci numbers are :" +s);
+    </script>
+
+</body>
+</html>
